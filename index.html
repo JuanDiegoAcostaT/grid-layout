@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Detflix.com</title>
     <link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Manjari&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
 body{
@@ -26,7 +26,8 @@ grid-template-areas: "header header header header "
                       "menu movie movie movie "
                       "menu movie movie movie ";
 
-/* height: 100vh; */
+/*  
+ */
 
 
 }
@@ -35,7 +36,7 @@ grid-template-areas: "header header header header "
     grid-area: movie;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 10% 20% 10% 20% 10% 20%;
+grid-template-rows:  16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
 grid-template-areas:    'subtitle1 subtitle1 subtitle1'
                          'movie1 movie12 movie13'
                          'subtitle2 subtitle2 subtitle2'
@@ -43,13 +44,17 @@ grid-template-areas:    'subtitle1 subtitle1 subtitle1'
                         'subtitle3 subtitle3 subtitle3'
                         'movie3 movie32 movie33'; 
 
-grid-area: 10px;
+
+height: 100%;
 
 }
 
 .subtitle1 {
 
 grid-area: subtitle1;
+margin-left: 100px;
+align-self: center;
+
 
 }
 
@@ -58,6 +63,9 @@ grid-area: subtitle1;
     grid-area: movie1;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
     
 }
 
@@ -66,6 +74,9 @@ grid-area: subtitle1;
     grid-area: movie12;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 
 .movie13 {
@@ -73,11 +84,16 @@ grid-area: subtitle1;
     grid-area: movie13;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 
 .subtitle2 {
 
 grid-area: subtitle2;
+margin-left: 100px;
+align-self: center;
 
 }
 .movie2 {
@@ -85,42 +101,61 @@ grid-area: subtitle2;
     grid-area: movie2;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 .movie22 {
 
     grid-area: movie22;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 .movie23 {
 
     grid-area: movie23;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 
 .subtitle3 {
 
 grid-area: subtitle3;
-
+margin-left: 100px;
+align-self: center;
 }
 .movie3 {
 
     grid-area: movie3;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 .movie32 {
 
     grid-area: movie32;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 .movie33 {
 
     grid-area: movie33;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
+    position: relative;
+        display: block;
 }
 
 .header {
@@ -143,8 +178,19 @@ box-shadow: 2px 2px 5px #999;
     grid-template-areas: 'home'
                         'ajustes';
     background: red;
-    /* height: 100vh; */
+    height: 100%;
+
+color: white;
 }
+
+.home,
+.ajustes {
+
+    margin-left: 40px;
+    
+}
+
+
 
 
 
@@ -194,6 +240,93 @@ box-shadow: 2px 2px 5px #999;
     
 }
 
+
+.icono1{
+
+    font-size: 60px;
+    color: white;
+
+    margin-top: 20px;
+}
+.icono2{
+
+    font-size: 60px;
+    color: white;
+}
+.icono3{
+
+    font-size: 60px;
+    color: white;
+}
+.icono4{
+
+    font-size: 60px;
+    color: white;
+}
+
+.movie-overlay {
+
+background: rgba(0,0,0, .4);
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+display: none;
+align-items: center;
+justify-content: center;
+color: white;
+text-align: center;
+
+
+}
+
+.movie1:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie12:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie13:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie2:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie22:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie23:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie3:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie32:hover .movie-overlay {
+
+display: flex;
+
+}
+.movie33:hover .movie-overlay {
+
+display: flex;
+
+}
+
 </style>
 
 </head>
@@ -227,11 +360,18 @@ box-shadow: 2px 2px 5px #999;
         
 
         <div class="home">
+                <i class="icono1 fa fa-home"></i>
                 <h4>Home</h4>
+                
+                <i class="icono2 fa fa-assistive-listening-systems"></i>
                 <h4>Trending</h4>
+                
+                <i class="icono3 fa fa-heart"></i>
                 <h4>Mas likes</h4>
         </div>
         <div class="ajustes">
+               
+                <i class="icono4 fa fa-cogs"></i>
                 <h5>Ajustes</h5>
 
         </div>
@@ -241,51 +381,141 @@ box-shadow: 2px 2px 5px #999;
     <div class="movie">
         
         <div class="subtitle1">
-            <p >En cartelera (hoy)</p>
+            <h2 >En cartelera (hoy)</h2>
         </div>    
 
         <div class="movie1">
                 
             <img src="aladin.jpg" alt="" width="250" height="150">
+
+            <div class="movie-overlay">
+                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
             
         </div>
         <div class="movie12">
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
             
         </div>
         <div class="movie13">
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
             
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
    
         <div class="subtitle2">
-                <p >Aclamadas por la critica</p>
+                <h2 >Aclamadas por la critica</h2>
             </div>   
 
         <div class="movie2">
             
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
         <div class="movie22">
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
         <div class="movie23">
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
 
         <div class="subtitle3">
-                <p >No te puedes perder</p>
+                <h2 >No te puedes perder</h2>
             </div>   
 
         <div class="movie3">
             
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
         <div class="movie32">
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
         <div class="movie33">
             <img src="aladin.jpg" alt="" width="250" height="150">
+            <div class="movie-overlay">
+                                                                                                
+                    <p>
+            
+                        <span class="post-likes">150</span>
+                        <span class="post-comments">10</span>
+            
+                    </p>
+            
+                </div>
         </div>
 
 
