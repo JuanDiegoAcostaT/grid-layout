@@ -10,11 +10,15 @@
 <style>
 
 body{
+         font-family: 'Manjari', sans-serif;
+         margin: 0;
+       
+         
+        }
 
-margin: 0;
-font-family: 'Manjari', sans-serif;;
 
-}
+  
+
 
 .hero-container {
 
@@ -26,10 +30,32 @@ grid-template-areas: "header header header header "
                       "menu movie movie movie "
                       "menu movie movie movie ";
 
-/*  
- */
+                      
 
+}
 
+.header {
+    grid-area: header;
+    /* position: fixed; */
+    display: grid;
+    grid-template-columns: 20% 60% 10% 10%;
+    grid-template-areas: 'badge buscador nombre imagen-perfil';
+background: white;
+box-shadow: 0 0 15px 0 black;
+/* border-bottom: 5px solid rgba(180, 178, 178, 0.4); */
+
+}
+
+.menu{
+    grid-area: menu;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 'home'
+                        'ajustes';
+    background: red;
+    height: 100vh;
+
+color: white;
 }
 
 .movie {
@@ -44,15 +70,16 @@ grid-template-areas:    'subtitle1 subtitle1 subtitle1'
                         'subtitle3 subtitle3 subtitle3'
                         'movie3 movie32 movie33'; 
 
+/* grid-gap: 2px; */
 
-height: 100%;
+
 
 }
 
 .subtitle1 {
 
 grid-area: subtitle1;
-margin-left: 100px;
+margin-left: 50px;
 align-self: center;
 
 
@@ -92,7 +119,7 @@ align-self: center;
 .subtitle2 {
 
 grid-area: subtitle2;
-margin-left: 100px;
+margin-left: 50px;
 align-self: center;
 
 }
@@ -127,7 +154,7 @@ align-self: center;
 .subtitle3 {
 
 grid-area: subtitle3;
-margin-left: 100px;
+margin-left: 50px;
 align-self: center;
 }
 .movie3 {
@@ -158,30 +185,8 @@ align-self: center;
         display: block;
 }
 
-.header {
-    grid-area: header;
-    /* position: fixed; */
-    display: grid;
-    grid-template-columns: 20% 60% 10% 20%;
-    grid-template-areas: 'badge buscador nombre imagen-perfil';
-background: #dbdbe2;
 
 
-/* border-bottom: 5px solid rgba(180, 178, 178, 0.4); */
-box-shadow: 2px 2px 5px #999;
-}
-
-.menu{
-    grid-area: menu;
-    display: grid;
-    grid-template-rows: 80% 20%;
-    grid-template-areas: 'home'
-                        'ajustes';
-    background: red;
-    height: 100%;
-
-color: white;
-}
 
 .home,
 .ajustes {
@@ -222,7 +227,7 @@ color: white;
 
     object-fit: cover;
     margin-top: 20px;
-   padding-right: 200px;
+   padding-right: 20px;
 
 }
 
@@ -266,7 +271,7 @@ color: white;
 
 .movie-overlay {
 
-background: rgba(0,0,0, .4);
+background:red;
 position: absolute;
 left: 0;
 right: 0;
@@ -434,7 +439,7 @@ display: flex;
 
         <div class="movie2">
             
-            <img src="aladin.jpg" alt="" width="250" height="150">
+            <img src="aladin.jpg" alt=""width="250" height="150">
             <div class="movie-overlay">
                                                                                                 
                     <p>
@@ -513,23 +518,10 @@ display: flex;
                         <span class="post-likes">150</span>
                         <span class="post-comments">10</span>
             
-                    </p>
-            
+                    </p> 
                 </div>
         </div>
-
-
     </div>
-
-
-    
-
-
-
  </div> 
-
-      
-
-
 </body>
 </html>
