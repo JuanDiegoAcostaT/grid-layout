@@ -1,2 +1,9 @@
-# gridlayout
-pagina web basica de prestacion de servicios de peliculas, aplicando las bases del css grid layout
+# Grid Layout
+Movie service provider interface
+
+- Grid Layout
+- Html5
+- Css3
+
+
+<img src="https://github.com/JuanDiegoAcostaT/grid-layout/blob/master/browser.png" />
