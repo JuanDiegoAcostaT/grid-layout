@@ -6,4 +6,4 @@ Movie service provider interface
 - Css3
 
 
-<img src="https://github.com/JuanDiegoAcostaT/grid-layout/blob/master/images/browser.png" />
+<img src="https://i.imgur.com/6rfEA2z.png" />
